@@ -7,11 +7,12 @@ public class enemy_health : MonoBehaviour
 {
     public PlayerStats playerStats;
 
-    float health = 100;
+    [SerializeField] float health;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerStats = FindFirstObjectByType<PlayerStats>();
+        health = 100;
     }
 
     // Update is called once per frame

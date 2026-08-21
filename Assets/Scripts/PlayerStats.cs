@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
     {
         statSheet = new playerStatSheet();
         //default values for testing
-        statSheet.health = 100;
+        statSheet.health = 100f;
         statSheet.movementSpeed = 2f;
         statSheet.attackDamage = 25f;
     }
