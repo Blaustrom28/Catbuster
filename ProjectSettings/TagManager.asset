@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RoomFloor
   - Attacks
+  - Item
   layers:
   - Default
   - TransparentFX
