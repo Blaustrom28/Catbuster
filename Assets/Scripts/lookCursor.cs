@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attacking : MonoBehaviour
+public class lookCursor : MonoBehaviour
 {
-    
-
     // Start is called before the first frame update
     void Start()
     {
-
         
-       
     }
 
     // Update is called once per frame
@@ -22,10 +18,6 @@ public class Attacking : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0, 0, angle -90);
-
-        
-
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
     }
-    
 }
