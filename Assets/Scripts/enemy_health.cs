@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class enemy_health : MonoBehaviour
 {
+    public PlayerStats playerStats;
 
     float health = 100;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,15 +20,15 @@ public class enemy_health : MonoBehaviour
         
     }
 
-/*
+
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "attack")
+        if(collision.gameObject.tag == "Attacks")
         {
-            decreaseHealth(attackSpawn.damage);
+            decreaseHealth(playerStats.statSheet.attackDamage);
         }
     }
-*/
+
 
     void decreaseHealth(float damage)
     {

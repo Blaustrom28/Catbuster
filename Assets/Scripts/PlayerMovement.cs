@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
     //determines how fast the player walkes
     private float playerSpeed;
 
-
+    PlayerStats playerStats;
     
     void Start()
     {
-        //test Speed can be adjusted here
-        playerSpeed = 2f;
+        playerStats = GetComponent<PlayerStats>();
+        
+        playerSpeed = playerStats.statSheet.movementSpeed;
     }
 
     
