@@ -7,8 +7,8 @@ using UnityEngine;
 public class RoomTransition : MonoBehaviour
 {
     
-    [SerializeField] GameObject door;
-    [SerializeField] GameObject room;
+    GameObject door;
+    
 
 
     
@@ -16,7 +16,7 @@ public class RoomTransition : MonoBehaviour
     void Start()
     {
         door = GameObject.Find("DoorTest");
-        room = GameObject.Find("RoomFloorTest");
+        
         
     }
 
