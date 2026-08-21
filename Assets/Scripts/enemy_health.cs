@@ -11,7 +11,7 @@ public class enemy_health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = FindFirstObjectByType<PlayerStats>();
+        playerStats = FindAnyObjectByType<PlayerStats>();
         health = 100;
     }
 

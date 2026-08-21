@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class playerStatSheet
+[System.Serializable]
+public class PlayerStatSheet
 {
     public float health;
     public float movementSpeed;
@@ -14,13 +14,13 @@ public class PlayerStats : MonoBehaviour
 {
 
 
-    public playerStatSheet statSheet;
+    public PlayerStatSheet statSheet;
     
 
 
     void Awake()
     {
-        statSheet = new playerStatSheet();
+        statSheet = new PlayerStatSheet();
         //default values for testing
         statSheet.health = 100f;
         statSheet.movementSpeed = 2f;
