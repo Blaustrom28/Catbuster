@@ -8,6 +8,7 @@ public class playerStatSheet
     public float health;
     public float movementSpeed;
     public float attackDamage;
+    public float attackSpeed; //how much till next attack
 }
 public class PlayerStats : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerStats : MonoBehaviour
         statSheet.health = 100f;
         statSheet.movementSpeed = 2f;
         statSheet.attackDamage = 25f;
+        statSheet.attackSpeed = 0.8f;
     }
 
 }

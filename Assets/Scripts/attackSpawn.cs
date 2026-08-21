@@ -6,22 +6,39 @@ public class attackSpawn : MonoBehaviour
 {
 
     GameObject attackBox;
+    float attackCoolDown;
+    float timer;
+    PlayerStats playerStats;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerStats = GetComponentInParent<PlayerStats>();
         attackBox = GameObject.Find("Attack");
+        attackCoolDown = playerStats.statSheet.attackSpeed;
+        timer = attackCoolDown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        timer += Time.deltaTime;
+
+
+
+        if (timer >= attackCoolDown)
         {
-            GameObject attackActive = Instantiate(attackBox);
-            attackActive.transform.position = transform.position;
-            attackActive.transform.rotation = transform.rotation;
-            attackActive.tag = "Attacks";
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject attackActive = Instantiate(attackBox);
+                attackActive.transform.position = transform.position;
+                attackActive.transform.rotation = transform.rotation;
+                attackActive.tag = "Attacks";
+                timer = 0f;
+            }
+
+            
         }
+        
     }
 }
